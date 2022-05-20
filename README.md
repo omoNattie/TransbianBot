@@ -5,7 +5,7 @@ This is my first python bot so don't expect it to be something special
 
 currect commands:
 - t!owo (about)
-- t!help
+- t!helps
 - t!uwu
 - t!tubbo (changes your name to tubbo (inside joke))
 - t!pfps (gets your, or a tagged member's pfp)
