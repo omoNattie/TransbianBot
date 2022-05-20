@@ -25,7 +25,7 @@ async def on_ready():
 async def owo(ctx):
     welcome = discord.Embed(title="Hello, fellow transbian!",
                             description="I am TransbianBot! I am here to aid you in this server, for my commands, "
-                                        "refer to t!help",
+                                        "refer to t!helps",
                             color=discord.Color.red())
     welcome.set_author(name="Natalie", icon_url="https://i.imgur.com/Sd3VwKb.png")
     welcome.add_field(name="I am an all purpose bot",
