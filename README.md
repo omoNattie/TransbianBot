@@ -13,3 +13,4 @@ current commands:
 - t!banish
 - t!celeste
 - t!transmeme
+- t!transrate
