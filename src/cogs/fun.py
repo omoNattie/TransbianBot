@@ -34,7 +34,7 @@ class TransMemes(commands.Cog):
         async def transmeme(ctx):
             trans_submissions = reddit.subreddit("traaaaaaannnnnnnnnns")  # get subreddit
             all_subs = []  # get all submissions
-            top = trans_submissions.top(limit=50)  # set the limit to only pick from top 50
+            top = trans_submissions.top(limit=150)  # set the limit to only pick from top
 
             for submission in top:
                 all_subs.append(submission)  # search all submissions in top and append

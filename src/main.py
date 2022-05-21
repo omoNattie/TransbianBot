@@ -2,6 +2,7 @@ import os
 import discord
 from discord.ext import commands
 from os import environ
+from discord.utils import find
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -19,6 +20,15 @@ for file in os.listdir("src\\cogs"):  # search cogs for giles
 @client.event
 async def on_ready():
     print(f"Logged in as {client.user.name}")
+
+
+@client.event
+async def on_guild_join(guild):
+    joinemb = discord.Embed(title="Thank you!", description="Thank you so much for inviting me!\nI'm Transbian bot, "
+                                                            "and I will assist around the server, my prefix is "
+                                                            "\"t!\", start using me by typing \"t!owo\"!",
+                            color=discord.Color.random())
+    await guild.text_channels[0].send(embed=joinemb)
 
 
 @client.command()
