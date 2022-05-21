@@ -40,7 +40,7 @@ class BanPeople(commands.Cog):
             if m is None:
                 await ctx.send(f"I can't ban air, {ctx.author}!")
             elif m == ctx.author:
-                await ctx.send("Nuu You can't ban yourself, {ctx.author}!")
+                await ctx.send(f"Nuu You can't ban yourself, {ctx.author}!")
             else:
                 await m.ban()
                 await ctx.send(f"{m} has been banished to the shadow realm for {reason}!")
