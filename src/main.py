@@ -35,7 +35,7 @@ async def owo(ctx):
                       value="I am made based on your ideas, so don't be shy to ask for a command!")
     welcome.set_footer(text="Have fun!\n-N")  # create an embed named welcome
     await ctx.send(
-        embed=welcome
+        embed=welcome  # sends embed
     )
 
 
