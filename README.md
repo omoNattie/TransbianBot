@@ -9,4 +9,8 @@ current commands:
 - t!uwu
 - t!tubbo (changes your name to tubbo (inside joke))
 - t!pfps (gets your, or a tagged member's pfp)
-
+- t!eradicate
+- t!banish
+- t!celeste
+- t!transmeme
+- t!transrate
