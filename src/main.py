@@ -28,14 +28,19 @@ async def on_guild_join(guild):
                                                             "and I will assist around the server, my prefix is "
                                                             "\"t!\", start using me by typing \"t!owo\"!",
                             color=discord.Color.random())
-    await guild.text_channels[0].send(embed=joinemb)
+    general = find(lambda g: g.name == "general", guild.text_channels)
+
+    if general and general.permissions_for(guild.me).send_messages:
+        await general.send(embed=joinemb)
+    else:
+        await guild.text_channels[0].send(embed=joinemb)
 
 
 @client.command()
 async def owo(ctx):
     welcome = discord.Embed(title="Hello, fellow transbian!",
                             description="I am TransbianBot! I am here to aid you in this server, for my commands, "
-                                        "refer to t!helps",
+                                        "refer to t!help",
                             color=discord.Color.red())
     welcome.set_author(name="Natalie", icon_url="https://i.imgur.com/Sd3VwKb.png")
     welcome.add_field(name="I am an all purpose bot",
