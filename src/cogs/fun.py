@@ -32,9 +32,10 @@ class TransMemes(commands.Cog):
 
         @client.command()
         async def transmeme(ctx):
+            msg = await ctx.send("Searching for posts... :mag_right:")
             trans_submissions = reddit.subreddit("traaaaaaannnnnnnnnns")  # get subreddit
             all_subs = []  # get all submissions
-            top = trans_submissions.top(limit=150)  # set the limit to only pick from top
+            top = trans_submissions.top(limit=100)  # set the limit to only pick from top
 
             for submission in top:
                 all_subs.append(submission)  # search all submissions in top and append
@@ -58,8 +59,9 @@ class Celeste(commands.Cog):
 
         @client.command()
         async def celeste(ctx):
+            await ctx.send("Searching for posts... :mag_right:")
             celery = reddit.subreddit("celestegame")  # get celeste reddit
-            topcelery = celery.top(limit=200)  # set your limit from top
+            topcelery = celery.top(limit=100)  # set your limit from top
             all_celeste = []  # all submissions from limit
 
             for celestepost in topcelery:
