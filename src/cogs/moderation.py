@@ -38,12 +38,12 @@ class BanPeople(commands.Cog):
                 reason = "No reason has been provided"  # if no reason provided send
 
             if m is None:
-                await ctx.send(f"I can't ban air, {ctx.author}!")
+                await ctx.send(f"I can't ban air, {ctx.author}!")  # if no one is pinged send this
             elif m == ctx.author:
-                await ctx.send(f"Nuu You can't ban yourself, {ctx.author}!")
+                await ctx.send(f"Nuu You can't ban yourself, {ctx.author}!")  # if author pinged themselves send this
             else:
-                await m.ban()
-                await ctx.send(f"{m} has been banished to the shadow realm for {reason}!")
+                await m.ban()  # ban pinged member
+                await ctx.send(f"{m} has been sent to the Elysian Plain for {reason}!")  # after ban send this
 
         @banish.error
         async def eradicate_error(error, ctx):
@@ -51,6 +51,19 @@ class BanPeople(commands.Cog):
                 await ctx.channel.send("I'm sorry, but this command is made for admins!")
 
 
+class FunnyTrans(commands.Cog):
+    def __init__(self, client):
+        self.client = client
+
+        @client.event
+        async def on_message(msg):
+            if msg.author == client.user:
+                return  # this is so the bot doesn't reply to itself
+            if "tranny" in msg.content.lower():  # check if message contains that word
+                await msg.channel.send(f"{msg.author.name} just means they're trans!")  # send this if so
+
+
 def setup(client):
     client.add_cog(KickPeople(client))
     client.add_cog(BanPeople(client))
+    client.add_cog(FunnyTrans(client))
