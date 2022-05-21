@@ -59,7 +59,7 @@ class Celeste(commands.Cog):
         @client.command()
         async def celeste(ctx):
             celery = reddit.subreddit("celestegame")  # get celeste reddit
-            topcelery = celery.top(limit=100)  # set your limit from top
+            topcelery = celery.top(limit=200)  # set your limit from top
             all_celeste = []  # all submissions from limit
 
             for celestepost in topcelery:
