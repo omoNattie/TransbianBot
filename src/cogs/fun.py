@@ -32,7 +32,7 @@ class TransMemes(commands.Cog):
 
         @client.command()
         async def transmeme(ctx):
-            msg = await ctx.send("Searching for posts... :mag_right:")
+            await ctx.send("Searching for posts... :mag_right:")
             trans_submissions = reddit.subreddit("traaaaaaannnnnnnnnns")  # get subreddit
             all_subs = []  # get all submissions
             top = trans_submissions.top(limit=100)  # set the limit to only pick from top
