@@ -7,11 +7,11 @@ class Help(commands.Cog):
         self.client = client
 
         @client.command()
-        async def helps(ctx):
+        async def help(ctx):
             helpemb = discord.Embed(color=discord.Color.green())
             helpemb.add_field(name="Commands",
-                              value="t!owo\nt!helps\nt!uwu\nt!tubbo)\nt!pfps\nt!banish\nt!eradicate")
-            helpemb.add_field(name="About Commands", value="t!owo - About command\nt!helps - This command, talks "
+                              value="t!owo\nt!help\nt!uwu\nt!tubbo)\nt!pfps\nt!banish\nt!eradicate")
+            helpemb.add_field(name="About Commands", value="t!owo - About command\nt!help - This command, talks "
                                                            "about the bots commands\nt!uwu - uwuifies your "
                                                            "text\nt!tubbo - Changes your name to \"Tubbo from "
                                                            "Dream\"\nt!pfps - Gets your or a tagged member's profile "

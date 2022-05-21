@@ -3,9 +3,9 @@ Transbian Bot is my next project that I'm working on and id like to make it open
 
 This is my first python bot so don't expect it to be something special
 
-currect commands:
+current commands:
 - t!owo (about)
-- t!helps
+- t!help
 - t!uwu
 - t!tubbo (changes your name to tubbo (inside joke))
 - t!pfps (gets your, or a tagged member's pfp)

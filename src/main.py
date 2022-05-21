@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 token = environ["TOKEN"]
-client = commands.Bot(command_prefix="t!", activity=discord.Game(name="t!owo to begin"))
+client = commands.Bot(command_prefix="t!", activity=discord.Game(name="t!owo to begin"), help_command=None)
 
 for file in os.listdir("src\\cogs"):  # search cogs for giles
     if file.endswith(".py"):  # if the file ends in .py load cogs.file
