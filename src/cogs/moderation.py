@@ -62,7 +62,7 @@ class FunnyTrans(commands.Cog):
             if "tranny" in msg.content.lower():  # check if message contains that word
                 await msg.channel.send(f"{msg.author.name} just means they're trans!")  # send this if so
             if "trannies" in msg.content.lower():
-                await msg.channel.send(f"{msg.author.name} just means they're trans!")  # same as before
+                await msg.channel.send(f"{msg.author.name} just means they're trans!")  # same as before lmao
 
 
 def setup(client):
