@@ -74,7 +74,7 @@ class Celeste(commands.Cog):
             celesteemb.set_image(url=celesteurl)  # create embed
 
             await ctx.send(
-                embed=celesteemb  # send said embed
+                f"{celestetitle}\nfrom subreddit r/celestegame\n{celesteurl}"
             )
 
 
