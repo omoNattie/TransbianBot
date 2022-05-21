@@ -61,6 +61,8 @@ class FunnyTrans(commands.Cog):
                 return  # this is so the bot doesn't reply to itself
             if "tranny" in msg.content.lower():  # check if message contains that word
                 await msg.channel.send(f"{msg.author.name} just means they're trans!")  # send this if so
+            if "trannies" in msg.content.lower():
+                await msg.channel.send(f"{msg.author.name} just means they're trans!")  # same as before
 
 
 def setup(client):
