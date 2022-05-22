@@ -22,20 +22,6 @@ async def on_ready():
     print(f"Logged in as {client.user.name}")
 
 
-@client.event
-async def on_guild_join(guild):
-    joinemb = discord.Embed(title="Thank you!", description="Thank you so much for inviting me!\nI'm Transbian bot, "
-                                                            "and I will assist around the server, my prefix is "
-                                                            "\"t!\", start using me by typing \"t!owo\"!",
-                            color=discord.Color.random())
-    general = find(lambda g: g.name == "general", guild.text_channels)
-
-    if general and general.permissions_for(guild.me).send_messages:
-        await general.send(embed=joinemb)
-    else:
-        await guild.text_channels[0].send(embed=joinemb)
-
-
 @client.command()
 async def owo(ctx):
     welcome = discord.Embed(title="Hello, fellow transbian!",
