@@ -25,6 +25,8 @@ class KickPeople(commands.Cog):
         async def banish_error(ctx, error):
             if isinstance(error, commands.MissingPermissions):
                 await ctx.send("I'm sorry, but this command is made for admins!")
+            else:
+                raise error
 
 
 class BanPeople(commands.Cog):
@@ -49,6 +51,8 @@ class BanPeople(commands.Cog):
         async def eradicate_error(ctx, error):
             if isinstance(error, commands.MissingPermissions):
                 await ctx.send("I'm sorry, but this command is made for admins!")
+            else:
+                raise error
 
 
 def setup(client):
