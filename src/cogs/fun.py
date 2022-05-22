@@ -17,13 +17,23 @@ class TransRate(commands.Cog):
         self.client = client
 
         @client.command()
-        async def transrate(ctx):
-            transemb = discord.Embed(color=discord.Color.random())
-            transemb.add_field(name="Trans Scale", value=f"I think that {ctx.author.name} is {randrange(100)}% trans")
+        async def transrate(ctx, m: discord.Member):
+            if m is None:
+                transemb = discord.Embed(color=discord.Color.random())
+                transemb.add_field(name="Trans Scale",
+                                   value=f"I think that {ctx.author.name} is {randrange(100)}% trans")
 
-            await ctx.send(
-                embed=transemb
-            )
+                await ctx.send(
+                    embed=transemb
+                )
+            else:
+                transembtag = discord.Embed(color=discord.Color.random())
+                transembtag.add_field(name="Trans Scale",
+                                      value=f"I think that {m.name} is {randrange(100)}% trans")
+
+                await ctx.send(
+                    embed=transembtag
+                )
 
 
 class TransMemes(commands.Cog):
