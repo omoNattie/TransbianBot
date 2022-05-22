@@ -17,7 +17,7 @@ class TransRate(commands.Cog):
         self.client = client
 
         @client.command()
-        async def transrate(ctx, m: discord.Member):
+        async def transrate(ctx, m: discord.Member = None):
             if m is None:
                 transemb = discord.Embed(color=discord.Color.random())
                 transemb.add_field(name="Trans Scale",
