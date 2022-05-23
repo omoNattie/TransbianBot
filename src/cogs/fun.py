@@ -63,6 +63,26 @@ class TransMemes(commands.Cog):
             )
 
 
+class Repel(commands.Cog):
+    def __init__(self, client):
+        self.client = client
+
+        @client.command()
+        async def repel(ctx, m: discord.Member = None):
+            if m is None:
+                await ctx.send(
+                    "Off, I say!",
+                    file=discord.File("src/imgs/anti-horni-spray.gif")
+                )
+            elif m == ctx.author:
+                await ctx.send("Y-you can't do that to yourself!!!")
+            else:
+                await ctx.send(
+                    f"Off, I say, {m.name}!",
+                    file=discord.File("src/imgs/anti-horni-spray.gif")
+                )
+
+
 class Celeste(commands.Cog):
     def __init__(self, client):
         self.client = client
@@ -94,3 +114,4 @@ def setup(client):
     client.add_cog(TransRate(client))
     client.add_cog(TransMemes(client))
     client.add_cog(Celeste(client))
+    client.add_cog(Repel(client))

@@ -14,7 +14,7 @@ class Help(commands.Cog):
             helpemb = discord.Embed(color=discord.Color.green())
             helpemb.add_field(name="Commands",
                               value="t!owo\nt!help\nt!uwu\nt!tubbo(Inside joke, we are not DreamSMP "
-                                    "simps)\nt!pfp\nt!banish\nt!eradicate\nt!transrate\nt!celeste\nt!transmeme")
+                                    "simps)\nt!pfp\nt!banish\nt!eradicate\nt!transrate\nt!celeste\nt!transmeme\nt!repel")
             helpemb.add_field(name="About Commands", value="t!owo - About command\nt!help - This command, talks "
                                                            "about the bots commands", inline=False)
             helpemb.add_field(name="Moderation Commands", value="t!eradicate - Kicks tagged member, structure is "
@@ -25,9 +25,11 @@ class Help(commands.Cog):
                                                          "text\nt!tubbo - Changes your name to \"Tubbo from "
                                                          "Dream\"\nt!pfp - Gets your or a tagged member's profile "
                                                          "picture\nt!transrate - Tells you on a percent scale how "
-                                                         "trans you are\nt!celeste - Sends a random post from "
+                                                         "trans you are, you can also tag a member to see how trans "
+                                                         "*they* are!\nt!celeste - Sends a random post from "
                                                          "r/celestegame\nt!transmeme - Sends a random post from "
-                                                         "r/traaaaaaannnnnnnnnns", inline=False)
+                                                         "r/traaaaaaannnnnnnnnns\nt!repel - Repel someone by tagging "
+                                                         "them! Or don't tag anyone and let them guess!", inline=False)
             await ctx.send(
                 embed=helpemb
             )
