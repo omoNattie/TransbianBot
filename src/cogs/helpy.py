@@ -14,7 +14,8 @@ class Help(commands.Cog):
             helpemb = discord.Embed(color=discord.Color.green())
             helpemb.add_field(name="Commands",
                               value="t!owo\nt!help\nt!uwu\nt!tubbo(Inside joke, we are not DreamSMP "
-                                    "simps)\nt!pfp\nt!banish\nt!eradicate\nt!transrate\nt!celeste\nt!transmeme\nt!repel")
+                                    "simps)\nt!pfp\nt!banish\nt!eradicate\nt!transrate\nt!celeste\nt!transmeme\nt"
+                                    "!repel,\nt!serverpicture")
             helpemb.add_field(name="About Commands", value="t!owo - About command\nt!help - This command, talks "
                                                            "about the bots commands", inline=False)
             helpemb.add_field(name="Moderation Commands", value="t!eradicate - Kicks tagged member, structure is "
@@ -29,7 +30,9 @@ class Help(commands.Cog):
                                                          "*they* are!\nt!celeste - Sends a random post from "
                                                          "r/celestegame\nt!transmeme - Sends a random post from "
                                                          "r/traaaaaaannnnnnnnnns\nt!repel - Repel someone by tagging "
-                                                         "them! Or don't tag anyone and let them guess!", inline=False)
+                                                         "them! Or don't tag anyone and let them "
+                                                         "guess!\nt!serverpicture - Gets the server picture and sends "
+                                                         "it", inline=False)
             await ctx.send(
                 embed=helpemb
             )
