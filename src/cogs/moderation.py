@@ -58,4 +58,3 @@ class BanPeople(commands.Cog):
 def setup(client):
     client.add_cog(KickPeople(client))
     client.add_cog(BanPeople(client))
-# client.add_cog(FunnyTrans(client))
