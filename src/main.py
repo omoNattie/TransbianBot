@@ -24,7 +24,7 @@ async def on_ready():
 
 @client.command()
 async def owo(ctx):
-    welcome = discord.Embed(title="Hello, fellow transbian! t!help to begin!",
+    welcome = discord.Embed(title="Hello, fellow transbian! t!help for commands!",
                             description="I am TransbianBot! I am here to aid you in this server, for my commands, "
                                         "refer to t!help",
                             color=discord.Color.red())
