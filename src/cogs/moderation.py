@@ -18,8 +18,12 @@ class KickPeople(commands.Cog):
             elif m == ctx.author:
                 await ctx.send("That's literally you?")  # if you tagged yourself send
             else:
+                kicked = discord.Embed(color=discord.Color.random())
+                kicked.add_field(name="Goodbye.", value=f"{m} has been eradicated for {reason}!")
                 await ctx.guild.kick(m)  # kick member
-                await ctx.send(f"{m} has been eradicated for {reason}!")
+                await ctx.send(
+                    embed=kicked
+                )
 
         @eradicate.error  # if permissions are missing send
         async def banish_error(ctx, error):
@@ -44,8 +48,12 @@ class BanPeople(commands.Cog):
             elif m == ctx.author:  # if auth pinged themselves send
                 await ctx.send(f"Nuu You can't ban yourself, {ctx.author.name}!")
             else:
+                banned = discord.Embed(color=discord.Color.random())
+                banned.add_field(name="Goodbye.", value=f"{m} has been sent to the Elysian Plain for {reason}!")
                 await m.ban()  # ban pinged member
-                await ctx.send(f"{m} has been sent to the Elysian Plain for {reason}!")  # after ban send this
+                await ctx.send(
+                    embed=banned
+                )  # after ban send this
 
         @banish.error
         async def eradicate_error(ctx, error):
