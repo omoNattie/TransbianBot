@@ -14,3 +14,5 @@ current commands:
 - t!celeste
 - t!transmeme
 - t!transrate
+- t!repel
+- t!roll
