@@ -110,8 +110,27 @@ class Celeste(commands.Cog):
             )
 
 
+class Roll(commands.Cog):
+    def __init__(self, client):
+        self.client = client
+
+        @client.command()
+        async def roll(ctx, *, msg=""):
+            if msg == "":
+                await ctx.send("You need to roll for something you know")
+            else:
+                rollemb = discord.Embed(color=discord.Color.random())
+                rollemb.add_field(name=f"Rolling for {msg}",
+                                  value=f"{ctx.author.name} has rolled a {randrange(1,20)} for {msg}")
+
+                await ctx.send(
+                    embed=rollemb
+                )
+
+
 def setup(client):
     client.add_cog(TransRate(client))
     client.add_cog(TransMemes(client))
     client.add_cog(Celeste(client))
     client.add_cog(Repel(client))
+    client.add_cog(Roll(client))
