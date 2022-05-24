@@ -2,7 +2,6 @@ import os
 import discord
 from discord.ext import commands
 from os import environ
-from discord.utils import find
 from dotenv import load_dotenv
 
 load_dotenv()
