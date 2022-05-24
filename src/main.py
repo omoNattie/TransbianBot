@@ -24,11 +24,12 @@ async def on_ready():
 
 @client.command()
 async def owo(ctx):
+    natalie = await client.fetch_user(824606337719074817)
     welcome = discord.Embed(title="Hello, fellow transbian! t!help for commands!",
                             description="I am TransbianBot! I am here to aid you in this server, for my commands, "
                                         "refer to t!help",
                             color=discord.Color.red())
-    welcome.set_author(name="Natalie", icon_url="https://i.imgur.com/Sd3VwKb.png")
+    welcome.set_author(name=f"{natalie.name}", icon_url=f"{natalie.avatar_url}")
     welcome.add_field(name="I am an all purpose bot",
                       value="I do anything around the server, as long as you tell my creator to make it first.",
                       inline=False)
