@@ -5,8 +5,8 @@ from discord.ext import commands
 from random import randrange
 
 reddit = praw.Reddit(
-                client_id="QQhHetkbgnNngq8DFYS26g",
-                client_secret="pQYPkXoAGSRb_1ReI4WO0kEE7-4fxQ",
+                client_id="bruh_moment",
+                client_secret="owo_uwu",
                 user_agent="Natalie",
                 check_for_async=False  # api setup
             )
